@@ -1,0 +1,28 @@
+/* ---------------  CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------- Typography */
+
+
+/* --------------- Body */
+/* ----- Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* ----- Main */
+#banner {
+    padding: 50px 20px;
+    height: 30vh;
+    vertical-align: middle;
+}
+h1 > span {
+    display: block;
+    text-indent: 20px;
+}
