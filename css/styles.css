@@ -39,8 +39,16 @@ h4 {
     line-height: 200%;
 }
 
-p {
+p, h1 > span {
     font-family: 'Raleway', sans-serif;
+}
+
+p {
+    line-height: 150%;
+}
+
+h1 > span {
+    font-weight: 300;
 }
 
 .project-tools > span {
@@ -53,7 +61,7 @@ p {
 body {
     background-color: var(--main-color);
 }
-header, main > * , footer{
+header, main > *, footer{
     padding: 5%;
 }
 p {
@@ -71,6 +79,9 @@ header {
 }
 
 /* ----- Main */
+main {
+    margin-bottom: 5%;
+}
 #banner {
     display: flex;
     flex-direction: column;
@@ -89,7 +100,7 @@ h1 > span {
     flex-direction: column;
     justify-content: space-between;
     border: solid var(--main-color-lighter) 2px;
-    border-radius: 0 0 5px 0;
+    border-radius: 0 0 100px 0;
     background-color: var(--main-color-lighter);
     padding: 10px;
     padding-bottom: 15px;
@@ -105,4 +116,9 @@ h1 > span {
 
 li {
     list-style-type: none;
+}
+
+/* ----- Footer */
+footer {
+    background-color: var(--main-color-lighter);
 }
