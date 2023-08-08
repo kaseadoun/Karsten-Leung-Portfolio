@@ -40,7 +40,12 @@ h4 {
     line-height: 200%;
 }
 
-p, h1 > span {
+h2 {
+    margin-bottom: 10px;
+}
+
+p,
+h1>span {
     font-family: 'Raleway', sans-serif;
 }
 
@@ -48,12 +53,12 @@ p {
     line-height: 150%;
 }
 
-h1 > span {
+h1>span {
     font-weight: 300;
     font-size: 50%;
 }
 
-.project-tools > span {
+.project-tools>span {
     color: var(--main-color);
     font-weight: 600;
 }
@@ -67,11 +72,19 @@ h1 > span {
 body {
     background-color: var(--main-color);
 }
-header, main > *, footer{
+
+header,
+main>*,
+footer {
     padding: 5%;
 }
+
 p {
     margin-bottom: 5%;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ----- Header */
@@ -84,30 +97,41 @@ header {
     align-items: center;
     padding: 20px;
 }
+
 #logo {
     border-radius: 50%;
     height: 3em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* ----- Main */
 main {
     margin-bottom: 5%;
 }
+
 #banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 50px 20px;
     height: 40vh;
 }
-h1 > span {
+
+h1>span {
     display: block;
     text-indent: 20px;
 }
 
 #self-portrait {
     max-width: 90vw;
-    margin: 10px 0;
 }
 
 .project-item {
@@ -122,26 +146,30 @@ h1 > span {
     margin-bottom: 20px;
     min-height: 200px;
 }
-.project-tools > span {
+
+.project-tools>span {
     background-color: var(--secondary-color);
     border: solid var(--secondary-color) 2px;
     padding: 0 5px;
     border-radius: 5px;
 }
 
-#toolkit > ul {
+#toolkit>ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 3%;
     gap: 30px;
 }
+
 li {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style-type: none;
 }
-li > img, svg {
+
+li>img,
+svg {
     height: 40px;
 }
 
@@ -150,36 +178,135 @@ footer {
     background-color: var(--main-color-lighter);
 }
 
+#socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 5%;
+}
+
 form {
     margin-bottom: 20px;
 }
+
 .form-input {
     border: solid 2px var(--form-placeholder);
     border-radius: 5px;
     color: var(--form-placeholder);
-    width: 100%;
     padding: 5px;
     margin-bottom: 10px;
 }
-form > button {
+
+form>button {
     background-color: var(--header-color);
     color: var(--main-color);
     padding: 10px;
     border: 2px solid var(--header-color);
     border-radius: 5px;
 }
-textarea {
-    max-width: 90vw;
-    min-width: 90vw;
-    width: 90vw;
+
+textarea, .form-input {
+    max-width: 100%;
+    min-width: 100%;
 }
 
 /* --------------- TABLET SIZE */
 @media only screen and (min-width: 600px) {
 
+    /* --------------- Typography */
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 3%;
+    }
+
+    li {
+        font-size: 20px;
+    }
+
+    /* --------------- Body */
+    /* ----- General */
+    header,
+    main>*,
+    footer {
+        padding: 3% 8%;
+    }
+
+    #banner {
+        height: 70vh;
+    }
+
+    #self-portrait {
+        max-width: 40vw;
+        margin-right: 20px;
+    }
+    #about-pic-and-text {
+        display: flex;
+    }
+
+    .project-img {
+        object-fit: cover;
+        max-width: 80vw;
+        max-height: 50vw;
+    }
+
+    #toolkit>ul {
+        margin-top: 10px;
+    }
+
+    li>img,
+    svg {
+        height: 60px;
+    }
+
+    #socials {
+        margin-bottom: 3%;
+    }
 }
 
 /* --------------- DESKTOP SIZE */
 @media only screen and (min-width: 992px) {
 
+    /* --------------- Typography */
+    h1 {
+        font-size: 80px;
+    }
+    .projects-item > p {
+        font-size: 5px;
+    }
+
+    /* --------------- Body */
+    header,
+    main>*,
+    footer {
+        padding: 20px 20%;
+    }
+    nav {
+        width: 500px;
+    }
+
+    #projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        height: 1200px;
+    }
+    .project-img {
+        object-fit: cover;
+        max-width: 28vw;
+        max-height: 15vw;
+    }
+
+    #footer-text-and-form {
+        display: flex;
+    }
+    form {
+        max-width: 40vw;
+    }
+    form > button:hover {
+        cursor: pointer;
+    }
 }
