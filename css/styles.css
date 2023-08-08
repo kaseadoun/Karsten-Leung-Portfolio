@@ -9,8 +9,9 @@
 :root {
     --main-color: #0C151D;
     --main-color-lighter: #172938;
-    --secondary-color: #BFD3C1;
+    --secondary-color: #bfd3c1;
     --header-color: #FFB01F;
+    --form-placeholder: #D3D3D3;
 }
 
 /* --------------- Typography */
@@ -49,11 +50,16 @@ p {
 
 h1 > span {
     font-weight: 300;
+    font-size: 50%;
 }
 
 .project-tools > span {
     color: var(--main-color);
     font-weight: 600;
+}
+
+.form-input {
+    font-size: 15px;
 }
 
 /* --------------- Body */
@@ -75,7 +81,12 @@ header {
     background-color: var(--main-color);
     top: 0;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
+}
+#logo {
+    border-radius: 50%;
+    height: 3em;
 }
 
 /* ----- Main */
@@ -90,9 +101,13 @@ main {
     height: 40vh;
 }
 h1 > span {
-    font-size: 70%;
     display: block;
     text-indent: 20px;
+}
+
+#self-portrait {
+    max-width: 90vw;
+    margin: 10px 0;
 }
 
 .project-item {
@@ -114,11 +129,57 @@ h1 > span {
     border-radius: 5px;
 }
 
+#toolkit > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3%;
+    gap: 30px;
+}
 li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style-type: none;
+}
+li > img, svg {
+    height: 40px;
 }
 
 /* ----- Footer */
 footer {
     background-color: var(--main-color-lighter);
+}
+
+form {
+    margin-bottom: 20px;
+}
+.form-input {
+    border: solid 2px var(--form-placeholder);
+    border-radius: 5px;
+    color: var(--form-placeholder);
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+form > button {
+    background-color: var(--header-color);
+    color: var(--main-color);
+    padding: 10px;
+    border: 2px solid var(--header-color);
+    border-radius: 5px;
+}
+textarea {
+    max-width: 90vw;
+    min-width: 90vw;
+    width: 90vw;
+}
+
+/* --------------- TABLET SIZE */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* --------------- DESKTOP SIZE */
+@media only screen and (min-width: 992px) {
+
 }
