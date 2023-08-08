@@ -118,22 +118,24 @@ main {
     margin-bottom: 5%;
 }
 
+/* ----- Banner */
 #banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 40vh;
 }
-
 h1>span {
     display: block;
     text-indent: 20px;
 }
 
+/* ----- About Section */
 #self-portrait {
     max-width: 90vw;
 }
 
+/* ----- Projects Section */
 .project-item {
     display: flex;
     flex-direction: column;
@@ -154,6 +156,7 @@ h1>span {
     border-radius: 5px;
 }
 
+/* ----- Toolkit Section */
 #toolkit>ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -235,10 +238,12 @@ textarea, .form-input {
         padding: 3% 8%;
     }
 
+    /* ----- Banner */
     #banner {
         height: 70vh;
     }
 
+    /* ----- About Section */
     #self-portrait {
         max-width: 40vw;
         margin-right: 20px;
@@ -247,21 +252,23 @@ textarea, .form-input {
         display: flex;
     }
 
+    /* ----- Projects */
     .project-img {
         object-fit: cover;
         max-width: 80vw;
         max-height: 50vw;
     }
 
+    /* ----- Toolkit */
     #toolkit>ul {
         margin-top: 10px;
     }
-
     li>img,
     svg {
         height: 60px;
     }
 
+    /* ----- Footer */
     #socials {
         margin-bottom: 3%;
     }
@@ -279,15 +286,19 @@ textarea, .form-input {
     }
 
     /* --------------- Body */
+    /* ----- General */
     header,
     main>*,
     footer {
         padding: 20px 20%;
     }
+
+    /* ----- Header */
     nav {
         width: 500px;
     }
 
+    /* ----- Projects Section */
     #projects-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -300,6 +311,7 @@ textarea, .form-input {
         max-height: 15vw;
     }
 
+    /* ----- Footer*/
     #footer-text-and-form {
         display: flex;
     }
